@@ -1,0 +1,1 @@
+"use strict";angular.module("linkerFrontendApp",["ngAnimate"]),angular.module("linkerFrontendApp").controller("MainCtrl",["$scope","$http",function(a,b){a.tiles=[],a.state={text:"Type some text."},a.$watch("state.text",function(){b.get("http://localhost:8385",{params:{q:a.state.text}}).success(function(b){a.tiles=b.tiles})})}]);
